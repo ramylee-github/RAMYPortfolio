@@ -1,0 +1,38 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/register": "^7.16.5",
+    "babelify": "^10.0.0",
+    "browserslist": "^4.19.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-image": "^6.3.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1",
+    "uglifyify": "^5.0.2"
+  },
+  "name": "RAMYPortfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "RAMY LEE <ramylee.fe@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "sass": "^1.45.1"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}
