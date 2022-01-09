@@ -4,11 +4,24 @@ html(lang="ko")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon", href="img/favicon_ramy.ico", type="image/x-icon")
         link(rel="stylesheet", href="css/style.css")
         title RAMY's Portfolio
     body 
-        block content 
+        .skip-nav 
+            a(href="#header") 전체 메뉴 바로가기 
+            a(href="#about") About 바로가기 
+            a(href="#resume") Resume 바로가기 
+            a(href="#works") Works 바로가기 
+            a(href="#contact") Contact 바로가기 
+            a(href="#footer") footer 바로가기 
 
-        include ../partials/footer
+        include partials/header
+        include partials/mainSection
+        include partials/aboutSection
+        include partials/resumeSection
+        include partials/worksSection
+        include partials/contactSection
+        include partials/footer
 
         script(src="js/main.js") 
