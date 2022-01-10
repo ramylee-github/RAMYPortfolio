@@ -1,0 +1,44 @@
+/**
+*============
+* header
+*============
+*/
+
+
+//header
+.page-header {
+    height: 80px;
+    border-bottom: 1px solid #2e2e2e;
+
+    .header-inner {
+        @include flexBox(row, space-between, center);
+        width:1280px;
+        margin:0 auto;
+    }
+
+    h1 {
+        padding: 22px 0 0 35px;
+        height: 80px;
+    }
+}
+
+//navigation
+.header-nav {
+    ul {
+        @include flexBox(row, flex-start, center);
+
+        a {
+            @include positionR(1);
+            display: block;
+            margin:0 30px;
+            font: {
+                size:17px;
+                weight:700;
+            }
+
+            &:hover {
+                color:#827bea;
+            }
+        }
+    }
+}

@@ -16,12 +16,13 @@ html(lang="ko")
             a(href="#contact") Contact 바로가기 
             a(href="#footer") footer 바로가기 
 
-        include partials/header
-        include partials/mainSection
-        include partials/aboutSection
-        include partials/resumeSection
-        include partials/worksSection
-        include partials/contactSection
-        include partials/footer
+        include patterns/header
+        main#main.page-container 
+            include patterns/mainSection
+            include patterns/aboutSection
+            include patterns/resumeSection
+            include patterns/worksSection    
+            include patterns/contactSection
+        include patterns/footer
 
-        script(src="js/main.js") 
+    script(src="js/main.js") 

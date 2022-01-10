@@ -1,0 +1,32 @@
+/**
+*============
+* commons
+*============
+*/
+* {
+    color:#fff;
+    font-size:16px;
+}
+
+//skip navigation
+.skip-nav {
+    a {
+        @include positionF(1000);
+        top:-500px;
+        left: -9999px;
+        display: block;
+        height: 40px;
+        width: 150px;
+        border-radius: 3px;
+        color:#fff;
+        font-size: 16px;
+        line-height: 38px;
+        text-align: center;
+        background-color:#000;
+
+        &:focus {
+            top:0;
+            left: 0;
+        }
+    }
+}

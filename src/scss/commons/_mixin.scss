@@ -1,12 +1,9 @@
-$global-full-size:100%;
-$global-white-color:#fff;
-$global-bg-position:0 0;
-$global-bg-repeat:no-repeat;
-$basic-transition:all .3s ease-in-out;
-// Breakpoints(
-$breakpoint-mobile: 768px;
-$breakpoint-tablet: 1024px;
-$breakpoint-web: 1500px;
+/**
+*============
+* mixin
+*============
+*/
+
 
 @mixin positionR($num) {
     position: relative;
@@ -14,6 +11,10 @@ $breakpoint-web: 1500px;
 }
 @mixin positionA($num) {
     position: absolute;
+    z-index: $num;
+}
+@mixin positionF($num) {
+    position: fixed;
     z-index: $num;
 }
 @mixin text-ellipsis($maxWidth) {

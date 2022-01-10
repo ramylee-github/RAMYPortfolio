@@ -1,9 +1,19 @@
-@import "_reset";
-@import "_variables";
-
-/*
-* commons
+/**
+*============
+* style
+*============
 */
-body {
-    background-color: #252627;
-}
+
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+@import "commons/variables";
+@import "commons/mixin";
+@import "commons/reset";
+@import "commons/common";
+
+@import "patterns/page";
+@import "patterns/header";
+
+@import "patterns/mainSection";

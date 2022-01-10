@@ -1,0 +1,32 @@
+/**
+*================
+* main section
+*===============
+*/
+
+
+.profile {
+    @include flexBox(row, center, center);
+    height: 100vh;
+
+    .profile__wrap {
+        @include flexBox(column, center, center);
+        transform: translateY(-30%);
+    }
+}
+
+.profile__name {
+    margin-top:30px;
+    font: {
+        size:36px;
+        weight:700;
+    }
+}
+
+.profile__job {
+    margin-top:15px;
+    font: {
+        size:18px;
+        weight:500;
+    }
+}
