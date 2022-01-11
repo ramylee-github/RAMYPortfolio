@@ -1,6 +1,52 @@
 import { random } from "./util";
 
-const rOne = random(10);
-const rTwo = random(20);
 
-console.log( `${rOne} ${rTwo}` ) ;
+//main code spread motion
+window.onload = () => {
+ 
+    const mainSection = document.querySelector('.profile');
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    
+    let codeArray = [':first-child',':hover',':focus',':nth-child', '&lt;div&gt;', '&lt;strong&gt;', '&lt;header&gt;', '&lt;dl&gt;', '&lt;span&gt;', '&lt;h1&gt;', '&lt;li&gt;', '&lt;p&gt;', '&lt;video&gt;', '&lt;figure&gt;', '&lt;ul&gt;', '&lt;ol&gt;', '&lt;nav&gt;', '&lt;article&gt;', '&lt;main&gt;', '&lt;a&gt;', 'flex-basis', 'text-overflow', 'display', 'font-size', 'background', 'object-fit', 'overflow']; 
+    TweenMax.set(mainSection, {perspective: 400});
+    
+    codeArray.forEach(function(codeItem, i){
+        const item = document.createElement("div");
+        item.setAttribute("class", "front-item");
+        item.style.top = window.innerHeight / 2 + "px";
+        item.style.left = window.innerHeight / 2 + "px";
+        item.innerHTML = codeItem;
+        mainSection.appendChild(item);
+    })
+
+    const frontItem = document.querySelectorAll(".front-item");
+
+    function motionSetting(){
+        TweenMax.killTweensOf(frontItem);
+
+        frontItem.forEach(function(item, i){
+            TweenMax.to(item, 1, {
+                top : Math.random() * (windowHeight - 150) + 60,
+                left : Math.random() * (windowWidth - 80) + 20, 
+                rotationX :  0, 
+                rotationY : 0, 
+                rotationZ : 0,
+                autoAlpha :  "random(.1,1)",
+                scale : .5,
+                ease : Power4.easenOut, 
+                delay : "random(0,.5)"
+            })
+        })
+    }
+
+    window.addEventListener("resize", function() {
+        resize();
+    });
+
+    function resize() {
+        motionSetting();
+    }
+
+    resize();
+}

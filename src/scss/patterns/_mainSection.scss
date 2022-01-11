@@ -6,12 +6,22 @@
 
 
 .profile {
-    @include flexBox(row, center, center);
     height: 100vh;
-
+    @include positionR(1);
+    
     .profile__wrap {
+        @include positionR(3);
         @include flexBox(column, center, center);
-        transform: translateY(-30%);
+        height: 100vh;
+        transform: translateY(-60px);
+    }
+    .front-item {
+        @include positionA(2);
+        color:#42c9ad;
+        font: {
+            size:25px;
+            weight:700;
+        };
     }
 }
 
