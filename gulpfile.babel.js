@@ -95,7 +95,7 @@ const watch = () => {
     gulp.watch(routes.js.watch, js);
 };
 
-const prepare = gulp.series([clean, img]);
+const prepare = gulp.series([clean, img, font]);
 
 const assets = gulp.series([pug, styles, js]);
 

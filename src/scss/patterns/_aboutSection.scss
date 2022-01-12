@@ -1,0 +1,29 @@
+/**
+*================
+* about section
+*===============
+*/
+
+
+.about-section {
+    @include positionR(1);
+}
+.about {
+    @include flexBox(row, center, center);
+}
+
+.profile__name {
+    margin-top:30px;
+    font: {
+        size:36px;
+        weight:700;
+    }
+}
+
+.profile__job {
+    margin-top:15px;
+    font: {
+        size:18px;
+        weight:500;
+    }
+}

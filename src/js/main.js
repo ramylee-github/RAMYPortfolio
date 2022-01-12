@@ -14,11 +14,11 @@ window.onload = () => {
     codeArray.forEach(function(codeItem, i){
         const item = document.createElement("div");
         item.setAttribute("class", "front-item");
-        item.style.top = window.innerHeight / 2 + "px";
-        item.style.left = window.innerHeight / 2 + "px";
+        item.style.top = '45%';
+        item.style.left = '48%';
         item.innerHTML = codeItem;
         mainSection.appendChild(item);
-    })
+    });
 
     const frontItem = document.querySelectorAll(".front-item");
 
@@ -29,13 +29,12 @@ window.onload = () => {
             TweenMax.to(item, 1, {
                 top : Math.random() * (windowHeight - 150) + 60,
                 left : Math.random() * (windowWidth - 80) + 20, 
-                rotationX :  0, 
-                rotationY : 0, 
-                rotationZ : 0,
+                rotation : Math.random() * (windowWidth - 50) + 20, 
                 autoAlpha :  "random(.1,1)",
                 scale : .5,
                 ease : Power4.easenOut, 
-                delay : "random(0,.5)"
+                delay : "random(0,.5)",
+                color:"random(['#6266cd', '#ffd15c', '#42c9ad', '#eb495b'])",
             })
         })
     }
