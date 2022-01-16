@@ -3,3 +3,177 @@
 * resume section
 *===============
 */
+
+.resume__item {
+    @include flexBox(column, center, center);
+    margin-top:35px;
+    
+    &:last-child {
+        margin-top:55px;
+    }
+
+    dt {
+        font: {
+            size:20px;
+            weight:700;
+        }
+    }
+    dd {
+        margin-top:30px;
+    }
+
+    ul {
+        @include flexBox(row, space-between, center);
+
+        .skill {
+            @include positionR(1);
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            margin-left:20px;
+            border-radius: 5px;
+            background-color: #0f0f0f;
+            background-position:center center;
+            background-repeat: no-repeat;
+            background-size: 55% auto;
+
+            &:first-child {
+                margin-left:0;
+            }
+            &:hover {
+                &::after {
+                    bottom:auto;
+                    top:0;
+                    height: 100%;
+                }
+
+                &>span {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            
+            &.skill__html5 {
+                background-image: url('../img/skills_html5.png');
+            }
+            &.skill__css3 {
+                background-image: url('../img/skills_css3.png');
+            }
+            &.skill__js {
+                background-image: url('../img/skills_javascript.png');
+            }
+            &.skill__jquery {
+                background-image: url('../img/skills_jquery.png');
+                background-size: 45% auto;
+            }
+            &.skill__pug {
+                background-image: url('../img/skills_pugjs.png');
+            }
+            &.skill__sass {
+                background-image: url('../img/skills_sass.png');
+            }
+            &.skill__ps {
+                background-image: url('../img/tools_photoshop.png');
+                background-size: 40% auto;
+            }
+            &.skill__ai {
+                background-image: url('../img/tools_ai.png');
+                background-size: 100% auto;
+            }
+            &.skill__zeplin {
+                background-image: url('../img/skills_zeplin.png');
+            }
+            &.skill__gulp {
+                background-image: url('../img/tools_gulp.png');
+            }
+            &.skill__git {
+                background-image: url('../img/tools_git.png');
+                background-size: 45% auto;
+            }
+            &.skill__npm {
+                background-image: url('../img/tools_npm.png');
+            }
+            &.skill__vscode {
+                background-image: url('../img/tools_vs-code.png');
+            }
+            &.skill__slack {
+                background-image: url('../img/tools_slack.png');
+                background-size: 48% auto;
+            }
+            &.skill__jira {
+                background-image: url('../img/tools_jira.png');
+                background-size: 45% auto;
+            }
+
+            &::after {
+                @include positionA(2);
+                top:auto;
+                left:0;
+                right: 0;
+                bottom:0;
+                @include pseudoSelector(100%, 0);
+                border-radius: 5px;
+                background-color: rgba(0,0,0,0.85);
+                transition: all .3s ease-in-out;
+
+            }
+
+            span {
+                @include positionR(3);
+                @include flexBox(row, center, center);
+                width: 100%;
+                height: 100%;
+                font: {
+                    size:12px;
+                    weight:500;
+                }
+                transform: translateY(20%);
+                transition: transform .35s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+               
+            }
+        }
+    }
+}
+
+.resume__experiences {
+    @include flexBox(row, space-between, flex-start);
+    flex-wrap: wrap;
+    
+    li {
+        flex-basis:49%;
+        min-width:49%;
+        min-height: 288px;
+        margin-bottom:28px;
+        padding:35px;
+        border:2px solid #3f3f3f;
+        border-radius: 30px;
+        transition:$basic-transition;
+
+        &>span {
+            display: block;
+            font-weight: 500;
+        }
+    }
+
+    .period {
+        font-size:19px;
+    }
+    .position {
+        font: {
+            size:25px;
+            weight:700;
+        }
+    }
+    .job {
+        font-size:22px;
+    }
+    .projects {
+        font: {
+            size:19px;
+            weight:300;
+        }
+    }
+}

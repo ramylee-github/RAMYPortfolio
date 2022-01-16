@@ -9,6 +9,7 @@ import autoprefixer from "gulp-autoprefixer";
 import miniCSS from "gulp-csso";
 import browserify from "gulp-bro";
 import babelify from "babelify";
+import fonts from "gulp-font";
 
 const sass = gsass(dsass);
 
@@ -36,7 +37,11 @@ const routes = {
         watch: "src/js/**/*.js",
         src:"src/js/main.js",
         dest:"build/js"
-    }
+    },
+    font : {
+        src:"src/assets/font/*",
+        dest:"build/font"
+    },
 };
 
 const pug = () => 
@@ -57,6 +62,18 @@ const img = () =>
     gulp.src(routes.img.src)
     .pipe(image())
     .pipe(gulp.dest(routes.img.dest));
+
+// const font = () =>  
+//     gulp.src(routes.font.src)
+//     .pipe(fonts({
+//         ext: '.css',
+//         fontface: 'src/assets/font',
+//         relative: '/assets/font',
+//         dest: 'build/assets/font',
+//         embed: ['woff2'],
+//         collate: false
+//     }))
+//     .pipe(gulp.dest(routes.font.dest));
 
 const styles = () =>  
     gulp.src(routes.scss.src)

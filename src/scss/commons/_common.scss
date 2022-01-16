@@ -8,14 +8,21 @@
     color:#fff;
     font: {
         size:16px;
-        family: ‘SUIT Variable’, sans-serif;
+        family: 'SUIT', 'sans-serif';
+        // family: ‘GmarketSans’, sans-serif;
+        // family: ‘Malgun Gothic’, sans-serif;
         weight:300;
     }
 }
 .txt-emphasize {
-    color:$point-color-yellow;
     font: {
         weight:700;
+    }
+    &.--yellow {
+        color:$point-color-yellow;
+    }
+    &.--purple {
+        color:$point-color-purple;
     }
 }
 
@@ -95,6 +102,10 @@ h2 {
         
         &.active {
             display: block;
+        }
+        &:last-child {
+            border:0;
+            padding:0;
         }
     }
 }
