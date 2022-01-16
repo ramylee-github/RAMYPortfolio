@@ -1,9 +1,9 @@
 import { random } from "./util";
 
 
-//main code spread motion
 window.onload = () => {
- 
+    
+    //main code spread motion
     const mainSection = document.querySelector('.profile');
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
@@ -37,6 +37,41 @@ window.onload = () => {
                 color:"random(['#6266cd', '#ffd15c', '#42c9ad', '#eb495b'])",
             })
         })
+    }
+
+    //paging
+    const tabs = document.querySelectorAll('.tabs__menu');
+    const tabsCont = document.querySelectorAll('.tabs__cont');
+    let pageNum = 0;
+
+    for(let i =0; i < tabs.length; i++){
+        (function(idx) {
+            tabs[idx].onclick = function() {
+                pageNum = idx;
+                tabSetting();
+            }
+        })(i);
+    }
+
+    // tabs.forEach(function(item, i){
+    //     TweenMax.from(item, .4, {
+    //         top:100,
+    //         autoAlpha:0,
+    //         ease: Power3.easenOut,
+    //         delay:i * .1 + 1,
+    //     })
+    // })
+
+    function tabSetting() {
+        for(let i = 0; i < tabs.length; i++){
+            if(pageNum === i) {
+                tabs[pageNum].classList.add("active");
+                tabsCont[pageNum].classList.add("active");
+            }else{
+                tabs[i].classList.remove("active");
+                tabsCont[i].classList.remove("active");
+            }
+        }
     }
 
     window.addEventListener("resize", function() {
