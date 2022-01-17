@@ -2,3 +2,93 @@ section#works.works-section
     div.container-inner
         h2 Works
         div.works
+            .tab
+                .tab__menu-wrap 
+                    button(type="button", data-id="0").tabs__menu.active Pined 
+                    button(type="button", data-id="1").tabs__menu All
+                .tabs__cont(data-id="0").active 
+                   ul.works__list 
+                    li 
+                        span.works__visual 
+                            img(src="", alt="포트폴리오 사이트")
+                        .works__info 
+                            ul.works__features 
+                                li.features__responsible
+                                    span 반응형 
+                                li.features__standard
+                                    span 웹표준 
+                                li.features__accessibility
+                                    span 웹접근성 
+                            h3 포트폴리오 사이트
+                            .btn__wrap 
+                                 a(href="#", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                    li 
+                        span.works__visual 
+                            img(src="", alt="롯데호텔 멤버십 사이트")
+                        .works__info 
+                            ul.works__features 
+                                li.features__responsible
+                                    span 반응형 
+                                li.features__standard
+                                    span 웹표준 
+                                li.features__accessibility
+                                    span 웹접근성 
+                            h3 롯데호텔 멤버십 사이트
+                            .btn__wrap 
+                                 a(href="https://lottehotelmembership.lottehotel.com/screen/FRT0001.ub", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                    li 
+                        span.works__visual 
+                            img(src="", alt="스타벅스 application")
+                        .works__info 
+                            ul.works__features 
+                                li.features__responsible
+                                    span 모바일 App 
+                                li.features__standard
+                                    span Webview 
+                            h3 스타벅스 Application
+                                span.extra__info (앱 내 스토어 케어, 고객센터 메뉴)
+                            .btn__wrap 
+                                 a(href="#", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                    li 
+                        span.works__visual 
+                            img(src="", alt="VOC 대시보드")
+                        .works__info 
+                            ul.works__features 
+                                li.features__standard
+                                    span 웹표준 
+                            h3 VOC 대시보드
+                            .btn__wrap 
+                                  a(href="#", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                    li 
+                        span.works__visual 
+                            img(src="", alt="아이서퍼 소개 사이트")
+                        .works__info 
+                            ul.works__features 
+                                li.features__responsible
+                                    span 반응형 
+                                li.features__standard
+                                    span 웹표준 
+                            h3 아이서퍼 소개 사이트
+                                span.extra__info (싱글 랜딩 페이지)
+                            .btn__wrap 
+                                  a(href="#", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                    li 
+                        span.works__visual 
+                            img(src="", alt="BAT 코리아 멤버십 사이트")
+                        .works__info 
+                            ul.works__features 
+                                li.features__responsible
+                                    span 반응형 
+                                li.features__standard
+                                    span 웹표준 
+                            h3 BAT 코리아 멤버십 사이트
+                                span.extra__info (Developed ver.)
+                            .btn__wrap 
+                                  a(href="#", target="_blank", title="새 창").btn.btn-purple Link
+                                 button(type="button").btn.btn-yellow Detail
+                .tabs__cont(data-id="1") 2

@@ -3,6 +3,11 @@
 * resume section
 *===============
 */
+.resume {
+    .tab {
+        min-height: 715px;
+    }
+}
 
 .resume__item {
     @include flexBox(column, center, center);
@@ -145,14 +150,24 @@
     li {
         flex-basis:49%;
         min-width:49%;
-        min-height: 288px;
+        min-height: 262px;
         margin-bottom:28px;
         padding:35px;
         border:2px solid #3f3f3f;
         border-radius: 30px;
         transition:$basic-transition;
 
-        &>span {
+        
+        &:hover {
+            border-color:#fff;
+            transform: translate(-5px, -5px);
+            box-shadow: 2px 2px 15px rgb(0 0 0 / 20%);
+        }
+        &.present {
+            border-color:#827bea;
+        }
+        &>span,
+        &>strong {
             display: block;
             font-weight: 500;
         }
@@ -162,18 +177,21 @@
         font-size:19px;
     }
     .position {
+        margin-top: 25px;
         font: {
             size:25px;
             weight:700;
         }
     }
     .job {
+        margin-top: 15px;
         font-size:22px;
     }
     .projects {
+        margin-top: 25px;
         font: {
             size:19px;
-            weight:300;
+            weight:200;
         }
     }
 }

@@ -1,3 +1,5 @@
+'use strict';
+import { compile } from "sass";
 import { random } from "./util";
 
 
@@ -39,40 +41,35 @@ window.onload = () => {
         })
     }
 
-    //paging
-    const tabs = document.querySelectorAll('.tabs__menu');
-    const tabsCont = document.querySelectorAll('.tabs__cont');
-    let pageNum = 0;
-
-    for(let i =0; i < tabs.length; i++){
-        (function(idx) {
-            tabs[idx].onclick = function() {
-                pageNum = idx;
-                tabSetting();
-            }
-        })(i);
-    }
-
-    // tabs.forEach(function(item, i){
-    //     TweenMax.from(item, .4, {
-    //         top:100,
-    //         autoAlpha:0,
-    //         ease: Power3.easenOut,
-    //         delay:i * .1 + 1,
-    //     })
-    // })
-
-    function tabSetting() {
-        for(let i = 0; i < tabs.length; i++){
-            if(pageNum === i) {
-                tabs[pageNum].classList.add("active");
-                tabsCont[pageNum].classList.add("active");
-            }else{
-                tabs[i].classList.remove("active");
-                tabsCont[i].classList.remove("active");
+    //tabs
+    function fnTabs() {
+        let tabMenu = document.querySelectorAll('.tabs__menu');
+        function tabClick (e) {
+            let tabSelectorSelected = e.target;
+            let tabContainer = tabSelectorSelected.closest('.tab');
+            let tabs = tabContainer.querySelectorAll('.tabs__menu');
+            let tabsCont = tabContainer.querySelectorAll('.tabs__cont');
+            
+            if(!tabSelectorSelected.classList.contains('active')) {
+                tabs.forEach(function(tabSelected, i) {
+                    if(tabSelectorSelected.getAttribute('data-id') === tabsCont[i].getAttribute('data-id')) {
+                        tabSelected.classList.add("active");
+                        tabsCont[i].classList.add("active");
+                    } else {
+                        tabSelected.classList.remove("active");
+                        tabsCont[i].classList.remove("active");
+                    }
+                });
             }
         }
+
+        tabMenu.forEach(function(tabMenu) {
+            tabMenu.addEventListener('click', tabClick);
+        });
     }
+
+    fnTabs();
+  
 
     window.addEventListener("resize", function() {
         resize();

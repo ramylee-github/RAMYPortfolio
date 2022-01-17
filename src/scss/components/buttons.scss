@@ -10,8 +10,10 @@ button {
     background-color: #999;
     cursor: pointer;
 
+    &.btn-yellow {
+        background-color:$point-color-yellow;
+    }
     &.btn-purple {
-        width:100%;
         background-color:$point-color-purple;
     }
 }

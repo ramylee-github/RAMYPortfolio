@@ -2,11 +2,11 @@ section#resume.resume-section
     div.container-inner
         h2 Resume
         div.resume
-            .tabs 
+            .tab 
                 .tab__menu-wrap 
-                    button(type="button").tabs__menu.active Skils &amp; Tools 
-                    button(type="button").tabs__menu Experience &amp; Education
-                .tabs__cont.active 
+                    button(type="button", data-id="0").tabs__menu.active Skils &amp; Tools 
+                    button(type="button", data-id="1").tabs__menu Experience &amp; Education
+                .tabs__cont(data-id="0").active 
                     dl.resume__item 
                         dt Skills
                         dd 
@@ -45,9 +45,9 @@ section#resume.resume-section
                                     span Slack
                                 li.skill.skill__jira 
                                     span Jira
-                .tabs__cont 
+                .tabs__cont(data-id="1") 
                     ul.resume__experiences
-                        li 
+                        li.present
                             span.period 
                                 | 2021.05 ~
                                 strong.txt-emphasize.--purple 현재
