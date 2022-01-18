@@ -4,9 +4,35 @@ section#resume.resume-section
         div.resume
             .tab 
                 .tab__menu-wrap 
-                    button(type="button", data-id="0").tabs__menu.active Skils &amp; Tools 
-                    button(type="button", data-id="1").tabs__menu Experience &amp; Education
+                    button(type="button", data-id="0").tabs__menu.active Experience &amp; Education
+                    button(type="button", data-id="1").tabs__menu Skils &amp; Tools 
                 .tabs__cont(data-id="0").active 
+                    ul.resume__experiences
+                        li.present
+                            span.period 
+                                | 2021.05 ~
+                                strong.txt-emphasize.--purple 현재
+                                |(21.05 ~ 06 당사 프리랜서 근무)
+                            strong.position (주)비플라이소프트 UX팀 프로
+                            span.job 퍼블리싱 전담
+                            span.projects 롯데호텔 / 신한라이프 / 하이트진로 / 강원도민일보 / 교보생명 / 자사 광고관리자, 아이서퍼 등
+                        li 
+                            span.period 
+                                | 2016.04 ~ 2021.04 (5년)
+                            strong.position (주)위고 디자인팀 주임
+                            span.job 퍼블리싱 전담
+                            span.projects 롯데카드 / 롯데월드 / 스타벅스 / 삼성라이온즈 / 현대,기아자동차 / BATKOREA / 우리카드 / 사람인 / 흥국생명 / OB맥주 / K쇼핑 등 외 다수
+                        li 
+                            span.period 
+                                | 2015.09 ~ 2016.02
+                            strong.position 더조은컴퓨터아트학원
+                            span.job NCS 모바일 웹/앱 디자인 및 퍼블리싱
+                        li 
+                            span.period 
+                                | 2010.03 ~ 2014.02
+                            strong.position 한국교통대학교 졸업
+                            span.job 실용영어학 전공
+                .tabs__cont(data-id="1") 
                     dl.resume__item 
                         dt Skills
                         dd 
@@ -45,29 +71,4 @@ section#resume.resume-section
                                     span Slack
                                 li.skill.skill__jira 
                                     span Jira
-                .tabs__cont(data-id="1") 
-                    ul.resume__experiences
-                        li.present
-                            span.period 
-                                | 2021.05 ~
-                                strong.txt-emphasize.--purple 현재
-                                |(21.05 ~ 06 당사 프리랜서 근무)
-                            strong.position (주)비플라이소프트 UX팀 프로
-                            span.job 퍼블리싱 전담
-                            span.projects 롯데호텔 / 신한라이프 / 하이트진로 / 강원도민일보 / 교보생명 / 자사 광고관리자, 아이서퍼 등
-                        li 
-                            span.period 
-                                | 2016.04 ~ 2021.04 (5년)
-                            strong.position (주)위고 디자인팀 주임
-                            span.job 퍼블리싱 전담
-                            span.projects 롯데카드 / 롯데월드 / 스타벅스 / 삼성라이온즈 / 현대,기아자동차 / BATKOREA / 우리카드 / 사람인 / 흥국생명 / OB맥주 / K쇼핑 등 외 다수
-                        li 
-                            span.period 
-                                | 2015.09 ~ 2016.02
-                            strong.position 더조은컴퓨터아트학원
-                            span.job NCS 모바일 웹/앱 디자인 및 퍼블리싱
-                        li 
-                            span.period 
-                                | 2010.03 ~ 2014.02
-                            strong.position 한국교통대학교 졸업
-                            span.job 실용영어학 전공
+                    

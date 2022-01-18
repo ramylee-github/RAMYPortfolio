@@ -6,6 +6,13 @@
 .resume {
     .tab {
         min-height: 715px;
+
+        .tabs__cont {
+            &:nth-child(2) {
+                border:0;
+                padding:0;
+            }
+        }
     }
 }
 

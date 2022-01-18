@@ -71,10 +71,11 @@ h2 {
 //tabs
 .tab {
     .tab__menu-wrap {
-        border-bottom: 1px solid #2e2e2e;
+        border-bottom: 2px solid #2e2e2e;
     }
 
     .tabs__menu {
+        min-width: 200px;
         padding:20px 30px;
         border-radius: 0;
         color:#3c3c3c;
@@ -87,7 +88,7 @@ h2 {
 
         &.active {
             color:#fff;
-            border-bottom: 1px solid $global-white-color;
+            border-bottom: 2px solid $global-white-color;
         }
     }
 
@@ -102,10 +103,6 @@ h2 {
         
         &.active {
             display: block;
-        }
-        &:last-child {
-            border:0;
-            padding:0;
         }
     }
 }
