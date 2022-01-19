@@ -57,6 +57,7 @@
     border:1px solid #3f3f3f;
     border-radius:10px;
     white-space:pre-line;
+    word-break: keep-all;
     line-height: 24px;
     transition: $basic-transition;
 }

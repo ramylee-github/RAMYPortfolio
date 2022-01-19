@@ -44,7 +44,8 @@
     @include flexBox(row, center, flex-end);
     height:370px;
     border-radius: 30px;
-    background-color: #0f0f0f;
+    background: #0f0f0f url('../img/ico_smile.png') no-repeat 50% 50%;
+    background-size: 60px auto;
 }
 
 .works__info {
