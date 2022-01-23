@@ -181,6 +181,7 @@
     }
 
     .period {
+        @include positionR(1);
         font-size:19px;
     }
     .position {

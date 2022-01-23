@@ -6,6 +6,28 @@
 
 
 @keyframes underlineMotion {
-    0% {width:0;}
-    100% {width:100%;}
+    0% {
+        width:0;
+    }
+    100% {
+        width:100%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform:translateY(-80px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+
+@keyframes pingpong {
+    0% {
+        transform:translateY(-10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
 }

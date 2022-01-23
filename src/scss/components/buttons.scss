@@ -20,17 +20,48 @@ button {
     margin:0 0 0 10px;
     border:0;
     border-radius: 30px;
+    // color:rgba(255,255,255,0.5);
     font: {
         size:16px;
         weight:600;
     }
     background-color: #999;
     cursor: pointer;
-
+    
     &.btn-yellow {
         background-color:$point-color-yellow;
     }
     &.btn-purple {
         background-color:$point-color-purple;
+    }
+}
+
+.btn-scroll {
+    @include positionF(3);
+    bottom:10%;
+    right:14%;
+    @include flexBox(row, center, center);
+    width:45px;
+    height:45px;
+    min-height: auto;
+    padding:0;
+    margin:0;
+    border-radius: 50%;
+    font: {
+        size:12px;
+        weight:600;
+    }
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition:$basic-transition;
+}
+
+.on-scroll {
+    .btn-scroll {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 }

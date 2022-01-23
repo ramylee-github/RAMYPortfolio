@@ -6,9 +6,11 @@
 .about-section {
     @include positionR(1);
 }
+
 .about {
     @include flexBox(row, center, flex-start);
 }
+
 .about__linked-site {
     @include flexBox(row, center, center);
     margin:23px 0 20px;
@@ -51,6 +53,7 @@
         width:100%;
     }
 }
+
 .about__introduction {
     min-height: 476px;
     padding:35px;

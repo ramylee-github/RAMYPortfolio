@@ -13,3 +13,11 @@ body {
     width:1190px;
     margin:0 auto 75px;
 }
+
+.on-scroll {
+    .page-container {
+        height:calc(100% - 80px);
+        margin-top:80px;
+    }
+
+}

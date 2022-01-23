@@ -25,7 +25,8 @@ html(lang="ko")
             include patterns/worksSection    
             include patterns/contactSection
         include patterns/footer
-        a(href="#").btn.btn-scroll Top 
+        include utilities/modals
+        a(href="javscript:;").btn.btn-scroll Top 
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js") 
-    script(src="js/main.js") 
+    script(src="js/main.js", defer) 

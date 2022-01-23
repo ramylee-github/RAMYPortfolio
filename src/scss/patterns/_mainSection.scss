@@ -12,14 +12,13 @@
     .profile__wrap {
         @include positionR(3);
         @include flexBox(column, center, center);
-        height: 100vh;
-        transform: translateY(-60px);
+        height: calc(100vh - 100px);
     }
     .front-item {
         @include positionA(2);
         color:#42c9ad;
         font: {
-            size:25px;
+            size:13px;
             weight:700;
         };
     }
