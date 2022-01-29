@@ -137,6 +137,7 @@ function init() {
     function modalControl() {
         const dimmedLayer = document.querySelector('.dimmed-layer');
         const modalCloseBtn = document.querySelector('.modal .btn-close');
+        const modalContent = document.querySelectorAll('.modal__cont');
 
         const lottehotelCont = document.getElementById('modalLottehotel'); 
         const starbucksCont = document.getElementById('modalStarbucks'); 
@@ -150,21 +151,28 @@ function init() {
         //모달 팝업 열기 조정
         const openModal = (cont) => {
             dimmedLayer.classList.add('opened');
-            cont.style.display = 'block';
+            cont.style.display = 'flex';
         }
         
         document.querySelector('.work__lottehotel .btn-yellow').addEventListener('click', event => openModal(lottehotelCont));
-        // document.querySelector('.work__starbucks .btn-yellow').addEventListener('click', event => openModal(starbucksCont));
-        // document.querySelector('.work__samsunglions .btn-yellow').addEventListener('click', event => openModal(samsungLionsCont));
+        document.querySelector('.work__starbucks .btn-yellow').addEventListener('click', event => openModal(starbucksCont));
+        document.querySelector('.work__samsunglions .btn-yellow').addEventListener('click', event => openModal(samsungLionsCont));
         document.querySelector('.work__voc .btn-yellow').addEventListener('click', event => openModal(vocCont));
-        // document.querySelector('.work__kadoChat .btn-yellow').addEventListener('click', event => openModal(kadoChatCont));
-        // document.querySelector('.work__eyesurfer .btn-yellow').addEventListener('click', event => openModal(eyesurferCont));
-        // document.querySelector('.work__myPortfolio .btn-yellow').addEventListener('click', event => openModal(myPortfolioCont));
+        document.querySelector('.work__kadochat .btn-yellow').addEventListener('click', event => openModal(kadoChatCont));
+        document.querySelector('.work__eyesurfer .btn-yellow').addEventListener('click', event => openModal(eyesurferCont));
+        document.querySelector('.work__myPortfolio .btn-yellow').addEventListener('click', event => openModal(myPortfolioCont));
+        document.querySelectorAll('.work__lottehotel .btn-yellow').forEach(function(lotteBtn){
+            lotteBtn.addEventListener('click', event => openModal(lottehotelCont));
+        });
 
 
         //모달 팝업 닫기 조정
         const closeModal = () => {
             dimmedLayer.classList.remove('opened');
+            
+            for(let i = 0; i < modalContent.length; i++) {
+                modalContent[i].style.display = 'none';
+            }
         }
         
         modalCloseBtn.addEventListener('click', closeModal);
