@@ -154,12 +154,17 @@ function init() {
             cont.style.display = 'flex';
         }
         
-        document.querySelector('.work__lottehotel .btn-yellow').addEventListener('click', event => openModal(lottehotelCont));
-        document.querySelector('.work__starbucks .btn-yellow').addEventListener('click', event => openModal(starbucksCont));
-        document.querySelector('.work__samsunglions .btn-yellow').addEventListener('click', event => openModal(samsungLionsCont));
+        document.querySelectorAll('.work__starbucks .btn-yellow').forEach(function(starbucksBtn){
+            starbucksBtn.addEventListener('click', event => openModal(starbucksCont));
+        });
+        document.querySelectorAll('.work__samsunglions .btn-yellow').forEach(function(samsungLionsBtn){
+            samsungLionsBtn.addEventListener('click', event => openModal(samsungLionsCont));
+        });
         document.querySelector('.work__voc .btn-yellow').addEventListener('click', event => openModal(vocCont));
         document.querySelector('.work__kadochat .btn-yellow').addEventListener('click', event => openModal(kadoChatCont));
-        document.querySelector('.work__eyesurfer .btn-yellow').addEventListener('click', event => openModal(eyesurferCont));
+        document.querySelectorAll('.work__eyesurfer .btn-yellow').forEach(function(eyesurferBtn){
+            eyesurferBtn.addEventListener('click', event => openModal(eyesurferCont));
+        });
         document.querySelector('.work__myPortfolio .btn-yellow').addEventListener('click', event => openModal(myPortfolioCont));
         document.querySelectorAll('.work__lottehotel .btn-yellow').forEach(function(lotteBtn){
             lotteBtn.addEventListener('click', event => openModal(lottehotelCont));
