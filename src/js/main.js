@@ -178,7 +178,13 @@ function init() {
         modalCloseBtn.addEventListener('click', closeModal);
         
         dimmedLayer.addEventListener('mouseup', (e) => {
-            e.target === dimmedLayer ? dimmedLayer.classList.remove('opened') : false;
+            if(e.target === dimmedLayer) {
+                dimmedLayer.classList.remove('opened');
+
+                for(let i = 0; i < modalContent.length; i++) {
+                    modalContent[i].style.display = 'none';
+                }
+            }
         });
     }
 }
