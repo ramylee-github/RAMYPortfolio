@@ -13,14 +13,20 @@
         @include positionR(3);
         @include flexBox(column, center, center);
         height: calc(100vh - 100px);
+
+        @include mobile {
+            img {
+                width: 45%;
+            }
+        }
     }
     .front-item {
         @include positionA(2);
         color:#42c9ad;
         font: {
-            size:13px;
+            size:1.3rem;
             weight:700;
-        };
+        }
     }
 }
 
@@ -30,6 +36,10 @@
         size:36px;
         weight:700;
     }
+
+    @include mobile {
+        font-size: 2.2rem;
+    }
 }
 
 .profile__job {
@@ -37,5 +47,9 @@
     font: {
         size:18px;
         weight:500;
+    }
+    @include mobile {
+        margin-top:8px;
+        font-size: 1.2rem;
     }
 }

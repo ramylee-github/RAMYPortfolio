@@ -9,6 +9,10 @@
 
 .about {
     @include flexBox(row, center, flex-start);
+
+    @include web {
+        flex-wrap: wrap;
+    }
 }
 
 .about__linked-site {
@@ -40,8 +44,11 @@
             &::after {
                 transform-origin: 0 50%;
                 transform: scaleX(1);
-               
             }
+        }
+
+        @include mobile {
+            font-size: 1.3rem;
         }
     }
 }
@@ -49,8 +56,33 @@
 .about__profile {
     margin:0 58px 0 105px;
 
+    @include mobile {
+        .btn__wrap {
+            justify-content: center;
+        }
+    }
+
     .btn-purple {
         width:100%;
+
+        @include mobile {
+            width: 80%;
+            min-height: 4rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    @include web {
+        margin:0 0 5rem;
+    }
+    @include mobile {
+        text-align: center;
+
+        .profile-img {
+            img {
+                width:73%;
+            }
+        }
     }
 }
 
@@ -63,20 +95,14 @@
     word-break: keep-all;
     line-height: 24px;
     transition: $basic-transition;
-}
 
-.profile__name {
-    margin-top:30px;
-    font: {
-        size:36px;
-        weight:700;
+    @include web {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
     }
-}
-
-.profile__job {
-    margin-top:15px;
-    font: {
-        size:18px;
-        weight:500;
+    @include mobile {
+        padding:2.5rem;
+        font-size: 1.3rem;
+        line-height: 2.1rem;
     }
 }

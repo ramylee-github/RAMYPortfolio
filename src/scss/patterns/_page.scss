@@ -6,12 +6,32 @@
 
 body {
     background-color: #252627;
+    overflow-x: hidden;
 }
 
 .container-inner {
     //section 공통 레이아웃
     width:1190px;
     margin:0 auto 75px;
+
+    @include web {
+        width: 100%;
+    }
+
+    @include mobile {
+        margin-bottom: 3.5rem;
+    }
+}
+
+@include web {
+    .page-container {
+        padding:0 5rem;
+    }
+}
+@include mobile {
+    .page-container {
+        padding:0 2rem;
+    }
 }
 
 .on-scroll {

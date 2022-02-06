@@ -14,12 +14,29 @@
     .header-inner {
         @include flexBox(row, space-between, center);
         width:1280px;
+        padding:0 35px 0 0;
         margin:0 auto;
-    }
 
+        @include web {
+            width:100%;
+        }
+        @include mobile {
+            padding:0;
+            flex-flow: column;
+        }
+    }
+    
     h1 {
         padding: 22px 0 0 35px;
         height: 80px;
+        
+        @include mobile {
+            padding:2.2rem 0 0 0;
+        }
+    }
+    @include mobile {
+        height: auto;
+        padding:0 0 2.5rem;
     }
 }
 
@@ -31,7 +48,7 @@
         li {
             @include positionR(1);
             overflow: hidden;
-            height:17px;
+            height:1.7rem;
         }
 
         a {
@@ -45,7 +62,20 @@
             transition:all 600ms cubic-bezier(0.33,1,0.68,1);
 
             &:hover {
-                color:#827bea;
+                color:$point-color-purple;
+            }
+
+            @include mobile {
+                margin:0 1rem;
+                font: {
+                    size:1.3rem;
+                }
+            }
+        }
+
+        @include mobile {
+            img {
+                width: 80%;
             }
         }
     }

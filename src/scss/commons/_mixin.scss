@@ -51,15 +51,15 @@
     @media screen and (max-width: #{$breakpoint-mobile - 1}) {
       @content;
     }
-  }
+}
   
-  @mixin tablet {
-    @media screen and (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet}) {
-      @content;
-    }
+@mixin tablet {
+  @media screen and (max-width: #{$breakpoint-tablet}) {
+    @content;
   }
-  @mixin web {
-    @media screen and (min-width: #{$breakpoint-tablet + 1}) and (max-width: #{$breakpoint-web}) {
-      @content;
-    }
+}
+@mixin web {
+  @media screen and (max-width: #{$breakpoint-web}) {
+    @content;
   }
+}

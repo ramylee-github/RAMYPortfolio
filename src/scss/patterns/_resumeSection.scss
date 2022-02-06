@@ -12,6 +12,10 @@
                 border:0;
                 padding:0;
             }
+            @include mobile {
+                padding: 2rem;
+                margin-top: 2.5rem;
+            } 
         }
     }
 }
@@ -22,6 +26,10 @@
     
     &:last-child {
         margin-top:55px;
+
+        @include mobile {
+            margin-top:2.5rem;
+        } 
     }
 
     dt {
@@ -29,6 +37,9 @@
             size:20px;
             weight:700;
         }
+        @include mobile {
+            font-size: 1.5rem;
+        } 
     }
     dd {
         margin-top:30px;
@@ -36,6 +47,11 @@
 
     ul {
         @include flexBox(row, space-between, center);
+        flex-wrap: wrap;
+        @include web {
+            justify-content:center;
+            margin-bottom: 1rem;
+        } 
 
         .skill {
             @include positionR(1);
@@ -146,6 +162,14 @@
                 visibility: hidden;
                
             }
+
+            @include web {
+                margin:0 5px 1.5rem;
+            } 
+            @include mobile {
+                width: 6rem;
+                height: 6rem;
+            } 
         }
     }
 }
@@ -171,18 +195,35 @@
             box-shadow: 2px 2px 15px rgb(0 0 0 / 20%);
         }
         &.present {
-            border-color:#827bea;
+            border-color:$point-color-purple;
         }
         &>span,
         &>strong {
             display: block;
             font-weight: 500;
         }
+
+        @include web {
+            flex-basis: 100%;
+            min-width: 100%;
+            min-height: auto;
+        } 
+        @include mobile {
+            padding:2.5rem;
+            margin-bottom: 2rem;
+        } 
     }
 
     .period {
         @include positionR(1);
         font-size:19px;
+
+        @include web {
+            font-size: 1.7rem;
+        }
+        @include mobile {
+            font-size: 1.2rem;
+        } 
     }
     .position {
         margin-top: 25px;
@@ -190,10 +231,28 @@
             size:25px;
             weight:700;
         }
+
+        @include web {
+            margin-top: 2rem;
+            font-size: 2.3rem;
+        }
+        @include mobile {
+            margin-top: 1.2rem;
+            font-size: 1.6rem;
+        } 
     }
     .job {
         margin-top: 15px;
         font-size:22px;
+
+        @include web {
+            margin-top: 1rem;
+            font-size: 2rem;
+        }
+        @include mobile {
+            margin-top: 8px;
+            font-size: 1.3rem;
+        } 
     }
     .projects {
         margin-top: 25px;
@@ -201,5 +260,16 @@
             size:19px;
             weight:200;
         }
+
+        @include web {
+            margin-top: 1.5rem;
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+        }
+        @include mobile {
+            margin-top: 8px;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        } 
     }
 }

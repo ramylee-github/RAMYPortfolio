@@ -16,6 +16,19 @@
 
         &:last-child {
             font-size:12px;
+
+            @include web {
+                font-size: 11px;
+            }
+        }
+
+        @include web {
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+        }
+        @include mobile {
+            width: 75%;
+            margin:0 auto
         }
     }
 }

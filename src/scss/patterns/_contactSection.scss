@@ -15,6 +15,16 @@
         size:20px;
     }
     line-height: 30px;
+
+    @include web {
+       font-size: 1.8rem;
+       line-height: 2.7rem;
+    }
+    @include mobile {
+        width: 75%;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
 }
 
 .contact__email {
@@ -24,5 +34,14 @@
     font: {
         size:24px;
         weight:200;
+    }
+    @include web {
+        padding:1.5rem 3rem;
+        font-size: 2.2rem;
+    }
+    @include mobile {
+        margin-top: 3rem;
+        padding:1rem 2rem;
+        font-size: 1.5rem;
     }
 }

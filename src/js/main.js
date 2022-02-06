@@ -4,6 +4,8 @@ window.onload = () => {
     init();
 }
 
+const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+
 function init() {
     codeSpreadMotion();
     topScrollControl();
@@ -120,10 +122,17 @@ function init() {
         const contactSection = document.getElementById('contact'); 
         
         const moveToSection = (sec) => {
-            window.scrollTo({
-                top:sec.offsetTop - 100,
-                behavior:'smooth'
-            });
+            if (isMobile) {
+                window.scrollTo({
+                    top:sec.offsetTop - 160,
+                    behavior:'smooth'
+                });
+            } else {
+                window.scrollTo({
+                    top:sec.offsetTop - 100,
+                    behavior:'smooth'
+                });
+            }
         }
 
         document.getElementById('navAbout').addEventListener('click', event => moveToSection(aboutSection));
