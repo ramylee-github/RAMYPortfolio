@@ -313,6 +313,7 @@ h2 {
             color:#fff;
             text-indent: -24px;
             padding-left: 22px;
+            word-break: break-all;
 
             &::before {
                 @include pseudoSelector(3px, 2px);

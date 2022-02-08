@@ -4,7 +4,7 @@ window.onload = () => {
     init();
 }
 
-const isMobile = window.matchMedia("only screen and (max-width: 767px)").matches;
+const isMobile = window.matchMedia("only screen and (max-width: 820px)").matches;
 
 function init() {
     codeSpreadMotion();
@@ -39,16 +39,29 @@ function init() {
             TweenMax.killTweensOf(frontItem);
     
             frontItem.forEach(function(item, i){
-                TweenMax.to(item, 1, {
-                    top : Math.random() * (windowHeight - 150) + 60,
-                    left : Math.random() * (windowWidth - 80) + 20, 
-                    rotation : Math.random() * (windowWidth - 50) + 20, 
-                    autoAlpha :  "random(.1,1)",
-                    scale : .5,
-                    ease : Power4.easenOut, 
-                    delay : "random(0,.5)",
-                    color:"random(['#6266cd', '#ffd15c', '#42c9ad', '#eb495b'])",
-                })
+                if (isMobile) {
+                    TweenMax.to(item, 1, {
+                        top : Math.random() * (windowHeight - 100),
+                        left : Math.random() * (windowWidth - 10), 
+                        rotation : Math.random() * (windowWidth - 50) + 20, 
+                        autoAlpha :  "random(.1,1)",
+                        scale : .5,
+                        ease : Power4.easenOut, 
+                        delay : "random(0,.5)",
+                        color:"random(['#6266cd', '#ffd15c', '#42c9ad', '#eb495b'])",
+                    })
+                } else {
+                    TweenMax.to(item, 1, {
+                        top : Math.random() * (windowHeight - 150) + 60,
+                        left : Math.random() * (windowWidth - 80) + 20, 
+                        rotation : Math.random() * (windowWidth - 50) + 20, 
+                        autoAlpha :  "random(.1,1)",
+                        scale : .5,
+                        ease : Power4.easenOut, 
+                        delay : "random(0,.5)",
+                        color:"random(['#6266cd', '#ffd15c', '#42c9ad', '#eb495b'])",
+                    })
+                }
             })
         }
 
@@ -161,6 +174,7 @@ function init() {
         const openModal = (cont) => {
             dimmedLayer.classList.add('opened');
             cont.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
         
         document.querySelectorAll('.work__starbucks .btn-yellow').forEach(function(starbucksBtn){
@@ -183,6 +197,7 @@ function init() {
         //모달 팝업 닫기 조정
         const closeModal = () => {
             dimmedLayer.classList.remove('opened');
+            document.body.style.overflow = 'auto';
             
             for(let i = 0; i < modalContent.length; i++) {
                 modalContent[i].style.display = 'none';
@@ -194,6 +209,7 @@ function init() {
         dimmedLayer.addEventListener('mouseup', (e) => {
             if(e.target === dimmedLayer) {
                 dimmedLayer.classList.remove('opened');
+                document.body.style.overflow = 'auto';
 
                 for(let i = 0; i < modalContent.length; i++) {
                     modalContent[i].style.display = 'none';
