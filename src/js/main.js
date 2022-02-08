@@ -41,7 +41,7 @@ function init() {
             frontItem.forEach(function(item, i){
                 if (isMobile) {
                     TweenMax.to(item, 1, {
-                        top : Math.random() * (windowHeight - 100),
+                        top : Math.random() * (windowHeight - 120),
                         left : Math.random() * (windowWidth - 10), 
                         rotation : Math.random() * (windowWidth - 50) + 20, 
                         autoAlpha :  "random(.1,1)",
